@@ -1,10 +1,12 @@
 import Navbar from "./components/navbar/Navbar";
 import {Route, Switch} from "react-router-dom";
 import Mainpage from "./components/Mainpage";
+import ColorContextProvider from "./contexts/ColorContext";
 
 function App() {
 
   return (
+    <ColorContextProvider>
       <div className="container">
         <Switch>
           <Navbar />
@@ -13,6 +15,7 @@ function App() {
           </Route>
         </Switch>
       </div>
+    </ColorContextProvider>
   );
 }
 
