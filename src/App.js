@@ -4,13 +4,15 @@ import Mainpage from "./components/Mainpage";
 import ColorContextProvider from "./contexts/ColorContext";
 
 function App() {
-
   return (
     <ColorContextProvider>
       <div className="container">
+        <Navbar />
         <Switch>
-          <Navbar />
           <Route path="/" exact>
+            <Mainpage />
+          </Route>
+          <Route path="/mainpage" exact>
             <Mainpage />
           </Route>
         </Switch>

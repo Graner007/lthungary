@@ -8,7 +8,7 @@ const DropdownNavbarItem = ({title, items}) => {
           </div>
           <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               {items.map((item) => (
-                  <Link className="link" to={"/" + title.toString().toLowerCase() + "/" + item.toString().toLowerCase()} className="dropdown-item"><li>{item}</li></Link>
+                  <Link className="link dropdown-item" to={"/" + title.toString().toLowerCase() + "/" + item.toString().toLowerCase()} ><li>{item}</li></Link>
               ))}
           </ul>
         </div>

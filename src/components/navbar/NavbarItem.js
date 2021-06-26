@@ -11,7 +11,7 @@ const NavbarItem = ({ title }) => {
     useEffect(() => {
         if (url === itemUrl) { setLetterColor(colors.blue); }
         else { setLetterColor("black") } 
-    }, [url, itemUrl]);
+    }, [url, itemUrl, colors.blue]);
 
     return (
         <li><Link className="link" to={itemUrl}><p className="nav-link" style={{color: letterColor}}>{title}</p></Link></li>

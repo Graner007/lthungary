@@ -4,7 +4,7 @@ export const ColorContext = createContext();
 
 const ColorContextProvider = (props) => {   
 
-    const [colors, setColors] = useState(
+    const [colors] = useState(
         {
             "blue": "#007fff",
             "grey": "#b2beb5",

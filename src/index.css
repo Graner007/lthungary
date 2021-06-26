@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #81d4fa;
 }
 
 code {
@@ -17,5 +18,5 @@ code {
 }
 
 .nav-link:hover {
-  color: "lightgrey";
+  opacity: 0.5;
 }
