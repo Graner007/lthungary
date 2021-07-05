@@ -2,19 +2,18 @@ import {Link, useLocation} from "react-router-dom";
 import {useState, useEffect, useContext} from "react";
 import { ColorContext } from "../../contexts/ColorContext";
 
-const NavbarItem = ({ title }) => {
+const NavbarItem = ({ title, urlName }) => {
     const url = useLocation().pathname;
     const {colors} = useContext(ColorContext);
     const [letterColor, setLetterColor] = useState(colors.black);
-    const itemUrl = "/" + title.toString().split(" ").join("-").toLowerCase();
 
     useEffect(() => {
-        if (url === itemUrl) { setLetterColor(colors.blue); }
+        if (url === urlName) { setLetterColor(colors.blue); }
         else { setLetterColor("black") } 
-    }, [url, itemUrl, colors.blue]);
+    }, [url, urlName, colors.blue]);
 
     return (
-        <li><Link className="link" to={itemUrl}><p className="nav-link" style={{color: letterColor}}>{title}</p></Link></li>
+        <li className="nav-item"><Link className="nav-link navbar-text" to={urlName} style={{color: letterColor}}>{title}</Link></li>
     )
 }
 

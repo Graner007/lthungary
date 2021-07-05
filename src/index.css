@@ -13,10 +13,31 @@ code {
     monospace;
 }
 
+.contact,
+.offer,
+.about-us {
+  background-color: white;
+  padding: 40px;
+}
+
 .link {
   text-decoration: none;
 }
 
 .nav-link:hover {
   opacity: 0.5;
+}
+
+.lang-text {
+  color: white !important;
+}
+
+.sliderimg{
+  width: 100%;
+  height: 450px;
+  object-fit: cover
+}
+
+.nav-item {
+  margin: 0 10px 0 10px;
 }
