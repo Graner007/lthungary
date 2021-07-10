@@ -1,6 +1,6 @@
-import Space from "./Space";
+import Space from "../Space";
 import { useContext } from 'react';
-import { LanguageContext } from "../contexts/LanguageContext";
+import { LanguageContext } from "../../contexts/LanguageContext";
 
 const AboutUs = () => {
     const {isHuTrue, hu, en} = useContext(LanguageContext);

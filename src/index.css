@@ -50,3 +50,33 @@ code {
 .large-font {
   font-size: large;
 }
+
+.service-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: white;
+  padding-left: 2%;
+  padding: 4%;
+}
+
+.footer {
+  display: grid;
+  background-color: rgb(43, 41, 41);
+  color: #fff;
+  grid-template-columns: 1fr 1fr;
+  text-align: start;
+  padding: 30px;
+}
+
+.footer h3 {
+  color: #2ea3f2;
+  margin-bottom: 20px;
+}
+
+.footer p:hover {
+  color: #2ea3f2;
+}
+
+.language-navbar {
+  background-color: #2ea3f2;
+}

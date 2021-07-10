@@ -1,6 +1,6 @@
-const Space = ({padding}) => {
+const Space = (props) => {
     return (
-        <div style={{padding: padding}}></div>
+        <div style={{padding: props.padding, backgroundColor: props.bgColor }}></div>
     )
 }
 

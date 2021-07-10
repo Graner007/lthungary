@@ -5,12 +5,12 @@ import ColorContextProvider from "./contexts/ColorContext";
 import logo from './static/LT_hungar_logo_4F.png';
 import LanguageBar from "./components/navbar/LanguageBar";
 import "react-alice-carousel/lib/alice-carousel.css";
-import AboutUs from "./components/AboutUs";
+import AboutUs from "./components/about-us/AboutUs";
 import Contact from "./components/Contact";
 import Offer from "./components/Offer";
+import Footer from "./components/Footer";
 
 function App() {
-
   return (
     <ColorContextProvider>
       <div className="container">
@@ -34,6 +34,7 @@ function App() {
               <Contact />
             </Route>
           </Switch>
+          <Footer />
         </div>
     </ColorContextProvider>
   );

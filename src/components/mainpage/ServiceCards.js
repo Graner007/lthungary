@@ -1,14 +1,14 @@
-import Service from "./Service";
-import { LanguageContext } from "../contexts/LanguageContext";
+import ServiceCard from "./ServiceCard";
+import { LanguageContext } from "../../contexts/LanguageContext";
 import { useContext } from "react";
 
 const ServiceContainer = () => {
     const {isHuTrue, hu, en} = useContext(LanguageContext);
     const language =  isHuTrue ? hu : en;
     return (
-        <div className="service-container">
+        <div className="service-cards">
             {language.service.map((item, index) => (
-                <Service key={index} service={item} />
+                <ServiceCard key={index} service={item} />
             ))}
         </div>
     )
