@@ -41,3 +41,12 @@ code {
 .nav-item {
   margin: 0 10px 0 10px;
 }
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.large-font {
+  font-size: large;
+}

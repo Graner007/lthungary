@@ -20,7 +20,7 @@ class LanguageContextProvider extends Component {
             contact: {
                 title: "Kapcsolat",
                 text: ["Címünk:  8868 Letenye, Deák Ferenc u. 38.",
-                    "Tel: +36302526212", 
+                    "Tel: +36 30 252 6212", 
                     "E-mail: info@lthungary.com",
                     "Adószám: 29310810-2-20.",
                     "Közösségi adószám: HU29310810",
@@ -34,8 +34,11 @@ class LanguageContextProvider extends Component {
                     "Cégnév",
                     "Telefonszám",
                     "Email cím",
-                    "Leírás",
-                    "Szolgáltatás kiválasztása"
+                    "Üzenet",
+                    "Szolgáltatás kiválasztása",
+                    "Küldés",
+                    "Ajánlat elküldve!",
+                    "Valami hiba történt, kérjük probálja meg újra!"
                 ]
             },
             sea: {
@@ -60,19 +63,22 @@ class LanguageContextProvider extends Component {
             contact: {
                 title: 'Contact',
                 text: ["Lentka LT Hungary Kft.",
-                    "Tel: +36302526212", 
+                    "Tel: +36 30 252 6212", 
                     "E-mail: info@lthungary.com"
                 ]
             },
             offer: {
                 title: "Offer",
-                text: [ "Surename",
+                text: [ "Last name",
                     "First name",
                     "Company",
                     "Telephone number",
                     "Email",
-                    "Description",
-                    "Choose a service below"
+                    "Message",
+                    "Choose a service below",
+                    "Submit",
+                    "Offer has been sent!",
+                    "Something went wrong, please try again!"
                 ]
             }
 		}

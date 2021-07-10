@@ -13,7 +13,7 @@ const NavbarItem = ({ title, urlName }) => {
     }, [url, urlName, colors.blue]);
 
     return (
-        <li className="nav-item"><Link className="nav-link navbar-text" to={urlName} style={{color: letterColor}}>{title}</Link></li>
+        <li className="nav-item"><Link className="nav-link navbar-text" to={urlName} style={{color: letterColor, fontSize: 17}}>{title}</Link></li>
     )
 }
 
