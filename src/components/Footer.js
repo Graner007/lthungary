@@ -10,14 +10,14 @@ const Footer = () => {
         <div className="footer container">
             <div className="footer-service">
                 <h3>{footer[0].title}</h3>
-                {footer[0].text.map((item, index) => (
-                    <p><Link to="/" key={index} style={{color: '#fff'}} className="link">{item}</Link></p>
+                {language.dropdown.map((text, index) => (
+                    <p key={index}><Link to={language.dropdownUrl[index]} style={{color: '#fff'}} className="link">{text}</Link></p>
                 ))}
             </div>
             <div className="footer-information">
                 <h3>{footer[1].title}</h3>
-                {footer[1].text.map((item, index) => (
-                    <p><Link to="/" key={index} style={{color: '#fff'}} className="link">{item}</Link></p>
+                {language.navbar.map((text, index) => (
+                    index < 2 ? null : <p key={index}><Link to={language.navbarUrl[index]} style={{color: '#fff'}} className="link">{text}</Link></p>
                 ))}
             </div>
         </div>

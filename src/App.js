@@ -9,6 +9,7 @@ import AboutUs from "./components/about-us/AboutUs";
 import Contact from "./components/Contact";
 import Offer from "./components/Offer";
 import Footer from "./components/Footer";
+import Service from "./components/Service";
 
 function App() {
   return (
@@ -24,7 +25,10 @@ function App() {
             <Route path="/mainpage" exact>
               <Mainpage />
             </Route>
-            <Route path="/about" exact>
+            <Route path="/services/:name" exact>
+              <Service />
+            </Route>
+            <Route path="/about-us" exact>
               <AboutUs />
             </Route>
             <Route path="/offer" exact>

@@ -19,11 +19,9 @@ const Navbar = ({logo}) => {
             </div>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul className="navbar-nav mr-auto me-auto mb-2 mb-lg-0">
-                    <NavbarItem title={language.navbar[0]}  urlName='/mainpage' />
-                    <DropdownNavbarItem title={language.navbar[1]} items={language.dropdown} urlName="/services" />
-                    <NavbarItem title={language.navbar[2]} urlName="/about" />
-                    <NavbarItem title={language.navbar[3]} urlName="/offer" />
-                    <NavbarItem title={language.navbar[4]} urlName="/contact" />
+                    {language.navbar.map((title, index) => (
+                        index === 1 ? <DropdownNavbarItem title={title} items={language.dropdown} urlNames={language.dropdownUrl} key={index} /> : <NavbarItem key={index} title={title} urlName={language.navbarUrl[index]} />
+                    ))}
                 </ul>
             </div>
          </nav>

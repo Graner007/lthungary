@@ -8,7 +8,7 @@ const ServiceContainer = () => {
     return (
         <div className="service-cards">
             {language.service.map((item, index) => (
-                <ServiceCard key={index} service={item} />
+                <ServiceCard key={index} service={item} url={language.dropdownUrl[index]} />
             ))}
         </div>
     )

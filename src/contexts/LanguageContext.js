@@ -7,7 +7,9 @@ class LanguageContextProvider extends Component {
         isHuTrue: true,
 		hu: {
             navbar: ["Kezdőlap", "Szolgáltatásaink", "Rólunk", "Ajánlatkérés", "Kapcsolat"],
-			dropdown: ["Nemzetközi Szállítmányozás", "Raktározás", "Belföldi díjtábla", "Tengeri szállítmányozás", "Légi szállítmányozás"],
+            navbarUrl: ["/mainpage", "/services", "/about-us", "/offer", "/contact"],
+			dropdown: ["Tengeri Szállítmányozás", "Közúti szállítmányozás", "Vasúti szállítmányozás Kínából", "Légi szállítmányozás"],
+            dropdownUrl: ["/services/sea-shipping", "/services/vehicular-transport", "/services/train-transport-from-china", "/services/air-transport"], 
             about: {
                 title: "Rólunk",
                 text: ["A Lentka LT Hungary Kft. egy 100%-osan magyar tulajdonban levő cég, Zala megyei székhellyel.",
@@ -44,26 +46,25 @@ class LanguageContextProvider extends Component {
             service: [
                 {
                     title: "Tengeri Szállítmányozás",
-                    text: ["A tengeri szállítmányozás óriási árutömeg mozgatására képes, kedvező szállítási költségek mellett. Általában 1- 2 hónapos szállítási idővel kell számolnunk.",
-                    "Abban az esetben ajánljuk ügyfeleinknek, ha szállítmányuk kézbesítése hosszabb tranzitidővel is megoldható. Cégünk vállalja komplett- és gyűjtőkonténeres import-export szállítások megszervezését. Megbízóink két szolgáltatás között tudnak választani. Teljes konténer (FCL – Full Container Load) Gyűjtő szállítmány (LCL – Less than Container Load)"]
+                    text: ["A tengeri szállítmányozás óriási árutömeg mozgatására képes, kedvező szállítási költségek mellett.", " Általában 1-2 hónapos szállítási idővel kell számolnunk.",
+                            "Abban az esetben ajánljuk ügyfeleinknek, ha szállítmányuk kézbesítése hosszabb tranzitidővel is megoldható.", " Cégünk vállalja komplett- és gyűjtőkonténeres import-export szállítások megszervezését.", " Megbízóink két szolgáltatás között tudnak választani.", " Teljes konténer (FCL – Full Container Load) Gyűjtő szállítmány (LCL – Less than Container Load)"]
                 },
                 {
                     title: "Közúti szállítmányozás",
-                    text: ["Megbízónk igényei szerint, komplett rakományok (FTL), illetve rész- és gyűjtőrakományok (LTL) fuvarszervezésével is foglalkozunk belföldön és Európán belül egyaránt. Közúti szállítmányokat rövid tranzitidővel juttatjuk el a megbízóinkhoz."]
+                    text: ["Megbízónk igényei szerint, komplett rakományok (FTL), illetve rész- és gyűjtőrakományok (LTL) fuvarszervezésével is foglalkozunk belföldön és Európán belül egyaránt.", "Közúti szállítmányokat rövid tranzitidővel juttatjuk el a megbízóinkhoz."]
                 },
                 {
                     title: "Vasúti szállítmányozás Kínából",
-                    text: ["Az egyik legmegbízhatóbb, a nagy távolság miatt kedvező ár-érték arányú szállítási forma. Vállalunk vasúti gyűjtő és teljes konténeres szállításokat Kínából direkt vonalon Budapestre. A vasúti szállítás fajlagos fuvarköltsége a légi és a tengeri szállítási díjak között alakul, ahogy a szállítási időtartam is kb. 20-24 nap. Azoknak ajánljuk ezt a szállítási formát, akiknek a tengeri szállítási idő túl hosszú, viszont a légi szállítási díjszint túl magas."]
+                    text: ["Az egyik legmegbízhatóbb, a nagy távolság miatt kedvező ár-érték arányú szállítási forma.", " Vállalunk vasúti gyűjtő és teljes konténeres szállításokat Kínából direkt vonalon Budapestre.", "A vasúti szállítás fajlagos fuvarköltsége a légi és a tengeri szállítási díjak között alakul, ahogy a szállítási időtartam is kb. 20-24 nap.", " Azoknak ajánljuk ezt a szállítási formát, akiknek a tengeri szállítási idő túl hosszú, viszont a légi szállítási díjszint túl magas."]
                 },
                 {
                     title: "Légi szállítmányozás",
-                    text: ["A légi szállítmányozást abban az esetben optimálisabb választás, ha a termék időérzékeny, tehát minél hamarabb el szeretnénk juttatni a szállítmányt a megrendelőhöz. Amellett, hogy gyors és biztonságos, az ügyfelek jobban tudnak gazdálkodni a raktárkészletükkel. Hátránya a többi szállítmányozási módhoz képest, hogy viszonylag magasabb költségekkel kell kalkulálni."]
+                    text: ["A légi szállítmányozást abban az esetben optimálisabb választás, ha a termék időérzékeny, tehát minél hamarabb el szeretnénk juttatni a szállítmányt a megrendelőhöz.", " Amellett, hogy gyors és biztonságos, az ügyfelek jobban tudnak gazdálkodni a raktárkészletükkel.", " Hátránya a többi szállítmányozási módhoz képest, hogy viszonylag magasabb költségekkel kell kalkulálni."]
                 }
             ],
             footer: [
                 {
-                    title: "Szolgáltatások",
-                    text: ["Tengeri Szállítmányozás", "Közúti szállítmányozás", "Vasúti szállítmányozás Kínából", "Légi szállítmányozás"]
+                    title: "Szolgáltatások"
                 },
                 {
                     title: "Információk",
@@ -74,7 +75,9 @@ class LanguageContextProvider extends Component {
 		},
 		en: {
             navbar: ["Mainpage", "Services", "About", "Offer", "Contact"],
-			dropdown: ["International Shipping", "Storage", "Domestic tariff table", "Sea Shipping", "Air shipping"],
+            navbarUrl: ["/mainpage", "/services", "/about-us", "/offer", "/contact"],
+			dropdown: ["Sea Shipping", "Vehicular transport", "Train transport from China", "Air transport"],
+            dropdownUrl: ["/services/sea-shipping", "/services/vehicular-transport", "/services/train-transport-from-china", "/services/air-transport"], 
             about: {
                 title: "About Us",
                 text: ["A Lentka LT Hungary Kft. egy 100%-osan magyar tulajdonban levő cég, Zala megyei székhellyel.",
@@ -110,31 +113,30 @@ class LanguageContextProvider extends Component {
             },
             service: [
                 {
-                    title: "Tengeri Szállítmányozás",
-                    text: ["A tengeri szállítmányozás óriási árutömeg mozgatására képes, kedvező szállítási költségek mellett. Általában 1- 2 hónapos szállítási idővel kell számolnunk.",
-                    "Abban az esetben ajánljuk ügyfeleinknek, ha szállítmányuk kézbesítése hosszabb tranzitidővel is megoldható. Cégünk vállalja komplett- és gyűjtőkonténeres import-export szállítások megszervezését. Megbízóink két szolgáltatás között tudnak választani. Teljes konténer (FCL – Full Container Load) Gyűjtő szállítmány (LCL – Less than Container Load)"]
+                    title: "Sea Shipping",
+                    text: ["A tengeri szállítmányozás óriási árutömeg mozgatására képes, kedvező szállítási költségek mellett.", " Általában 1-2 hónapos szállítási idővel kell számolnunk.",
+                            "Abban az esetben ajánljuk ügyfeleinknek, ha szállítmányuk kézbesítése hosszabb tranzitidővel is megoldható.", " Cégünk vállalja komplett- és gyűjtőkonténeres import-export szállítások megszervezését.", " Megbízóink két szolgáltatás között tudnak választani.", " Teljes konténer (FCL – Full Container Load) Gyűjtő szállítmány (LCL – Less than Container Load)"]
                 },
                 {
-                    title: "Közúti szállítmányozás",
-                    text: ["Megbízónk igényei szerint, komplett rakományok (FTL), illetve rész- és gyűjtőrakományok (LTL) fuvarszervezésével is foglalkozunk belföldön és Európán belül egyaránt. Közúti szállítmányokat rövid tranzitidővel juttatjuk el a megbízóinkhoz."]
+                    title: "Vehicular transport",
+                    text: ["Megbízónk igényei szerint, komplett rakományok (FTL), illetve rész- és gyűjtőrakományok (LTL) fuvarszervezésével is foglalkozunk belföldön és Európán belül egyaránt.", "Közúti szállítmányokat rövid tranzitidővel juttatjuk el a megbízóinkhoz."]
                 },
                 {
-                    title: "Vasúti szállítmányozás Kínából",
-                    text: ["Az egyik legmegbízhatóbb, a nagy távolság miatt kedvező ár-érték arányú szállítási forma. Vállalunk vasúti gyűjtő és teljes konténeres szállításokat Kínából direkt vonalon Budapestre. A vasúti szállítás fajlagos fuvarköltsége a légi és a tengeri szállítási díjak között alakul, ahogy a szállítási időtartam is kb. 20-24 nap. Azoknak ajánljuk ezt a szállítási formát, akiknek a tengeri szállítási idő túl hosszú, viszont a légi szállítási díjszint túl magas."]
+                    title: "Train transport from China",
+                    text: ["Az egyik legmegbízhatóbb, a nagy távolság miatt kedvező ár-érték arányú szállítási forma.", " Vállalunk vasúti gyűjtő és teljes konténeres szállításokat Kínából direkt vonalon Budapestre.", "A vasúti szállítás fajlagos fuvarköltsége a légi és a tengeri szállítási díjak között alakul, ahogy a szállítási időtartam is kb. 20-24 nap.", " Azoknak ajánljuk ezt a szállítási formát, akiknek a tengeri szállítási idő túl hosszú, viszont a légi szállítási díjszint túl magas."]
                 },
                 {
-                    title: "Légi szállítmányozás",
-                    text: ["A légi szállítmányozást abban az esetben optimálisabb választás, ha a termék időérzékeny, tehát minél hamarabb el szeretnénk juttatni a szállítmányt a megrendelőhöz. Amellett, hogy gyors és biztonságos, az ügyfelek jobban tudnak gazdálkodni a raktárkészletükkel. Hátránya a többi szállítmányozási módhoz képest, hogy viszonylag magasabb költségekkel kell kalkulálni."]
+                    title: "Air transport",
+                    text: ["A légi szállítmányozást abban az esetben optimálisabb választás, ha a termék időérzékeny, tehát minél hamarabb el szeretnénk juttatni a szállítmányt a megrendelőhöz.", " Amellett, hogy gyors és biztonságos, az ügyfelek jobban tudnak gazdálkodni a raktárkészletükkel.", " Hátránya a többi szállítmányozási módhoz képest, hogy viszonylag magasabb költségekkel kell kalkulálni."]
                 }
             ],
             footer: [
                 {
-                    title: "Szolgáltatások",
-                    text: ["Tengeri Szállítmányozás", "Közúti szállítmányozás", "Vasúti szállítmányozás Kínából", "Légi szállítmányozás"]
+                    title: "Services"
                 },
                 {
-                    title: "Információk",
-                    text: ["Ajánlatkérés", "Rólunk", "Kapcsolat"]
+                    title: "Informations",
+                    text: ["Offer", "About us", "Contact"]
                 }
             ]
 		}

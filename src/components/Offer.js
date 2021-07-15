@@ -67,7 +67,7 @@ const Offer = () => {
                         ))}
                     </select>
                 </div>
-                <div className="col-12">
+                <div className="col-12" style={{paddingTop: "2%"}}>
                     <button type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
                 </div>
             </form>
