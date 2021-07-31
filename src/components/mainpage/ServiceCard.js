@@ -6,7 +6,6 @@ const Service = ({service, url}) => {
         <div className="card" style={{width: "18rem"}}>
             <div className="card-body">
                 <h5 className="card-title">{service.title}</h5>
-                <p className="card-text">{service.text}</p>
                 <Link to={url} className="card-link btn btn-primary">{service.title}</Link>
             </div>
         </div>

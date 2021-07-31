@@ -12,7 +12,7 @@ const Offer = () => {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm("service_brluc4n", "template_egyjlm8", e.target, "user_TSozZYrqHfgeliZhvC5jr")
+        emailjs.sendForm("service_t6rkps2", "template_3wynuti", e.target, "user_mTMpXYVWZAcHpA5E6wZbD")
             .then(res => {
                 if (res.text === "OK") {
                     setSuccess(true);
