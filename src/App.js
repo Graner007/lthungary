@@ -37,6 +37,9 @@ function App() {
             <Route path="/contact" exact>
               <Contact />
             </Route>
+            <Route path="*" exact render={() => {
+              return <Redirect to="/mainpage" />;
+            }}></Route>
           </Switch>
           <Footer />
         </div>
