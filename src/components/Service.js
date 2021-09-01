@@ -22,7 +22,7 @@ const Service = () => {
                 setService(language.service[1]);
                 setLoading(false);
                 break;
-            case 'train-transport-from-china':
+            case 'train-transport':
                 setService(language.service[2]);
                 setLoading(false);
                 break;
@@ -43,7 +43,7 @@ const Service = () => {
                 {service.text.map((item, index) => (
                     <p key={index}>{item}</p>
                 ))}
-                <button className="btn btn-primary" style={{marginTop: "2%"}}><Link className="link" to="/offer" style={{color: "white"}}>{language.navbar[3]}</Link></button>
+                <button className="btn btn-primary" style={{marginTop: "2%"}}><Link className="link" to="/offer" style={{color: "white"}}>{language.navbar[4]}</Link></button>
             </div>
     )
 }
