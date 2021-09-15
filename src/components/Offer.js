@@ -20,7 +20,7 @@ const Offer = () => {
                 if (res.text === "OK") {
                     setSuccess(true);
                     setError(false);
-                    setRecaptchaSuccess(false);
+                    //setRecaptchaSuccess(false);
                 } 
             })
             .catch(() => {
@@ -79,13 +79,13 @@ const Offer = () => {
                         ))}
                     </select>
                 </div>
-                <Recaptcha
+                {/* <Recaptcha
                     sitekey="6LfbdV0cAAAAAPUvNldqXAIcbri-uPBmFnv8wgvP"
                     render="explicit"
                     verifyCallback={verifyCallback}
-                />
+                /> */}
                 <div className="col-12" style={{paddingTop: "2%"}}>
-                    <button disabled={recaptchaSuccess ? false : true} type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
+                    <button disabled={recaptchaSuccess ? false : false} type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
                 </div>
             </form>
         </div>
