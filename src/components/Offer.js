@@ -2,27 +2,39 @@ import Space from "./Space";
 import { useContext, useState } from 'react';
 import { LanguageContext } from "../contexts/LanguageContext";
 import emailjs from 'emailjs-com';
+import Recaptcha from "react-recaptcha";
 
 const Offer = () => {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
+    const [recaptchaSuccess, setRecaptchaSuccess] = useState(false);
     const {isHuTrue, hu, en} = useContext(LanguageContext);
     const language =  isHuTrue ? hu : en;
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm("service_t6rkps2", "template_3wynuti", e.target, "user_mTMpXYVWZAcHpA5E6wZbD")
+        if (recaptchaSuccess) {
+            emailjs.sendForm("service_t6rkps2", "template_3wynuti", e.target, "user_mTMpXYVWZAcHpA5E6wZbD")
             .then(res => {
                 if (res.text === "OK") {
                     setSuccess(true);
                     setError(false);
+                    setRecaptchaSuccess(false);
                 } 
             })
-            .catch(err => {
+            .catch(() => {
                 setError(true);
                 setSuccess(false);
             });
+        }
+        else {
+            setError(true);
+        } 
+    }
+
+    const verifyCallback = (response) => {
+        setRecaptchaSuccess(true);
     }
 
     return (
@@ -67,8 +79,13 @@ const Offer = () => {
                         ))}
                     </select>
                 </div>
+                <Recaptcha
+                    sitekey="6LfbdV0cAAAAAPUvNldqXAIcbri-uPBmFnv8wgvP"
+                    render="explicit"
+                    verifyCallback={verifyCallback}
+                />
                 <div className="col-12" style={{paddingTop: "2%"}}>
-                    <button type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
+                    <button disabled={recaptchaSuccess ? false : true} type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
                 </div>
             </form>
         </div>

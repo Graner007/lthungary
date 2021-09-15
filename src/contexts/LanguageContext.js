@@ -129,29 +129,29 @@ class LanguageContextProvider extends Component {
                 ]
             },
             china: {
-                title: "Beszerzés Kínából",
+                title: "Supply from China",
                 beginningText: [
-                    "Cégünk széleskörű kapcsolatokkal rendelkezik Kínában, mely megkönnyíti mind a kommunikációt, mind pedig az áru minőségének helyi ellenőrzését.",
-                    "A Te igényeid szerint felkutatjuk a potenciális beszállítókat, és teljeskörű ügyintézést vállalunk kezdve a mintatermékek beszerzésétől, az ártárgyalásokon át egészen a szállítás és vámkezelés lebonyolításáig."
+                    "Our company has extensive contacts in China, which facilitates both communication and local control of the quality of products.",
+                    "We will search for potential suppliers according to your needs, and we will undertake a full range of administration, from the procurement of sample products, through price negotiations to the delivery and customs clearance."
                 ],
                 list: {
-                    title: "Vedd fel velünk a kapcsolatot, ha",
+                    title: "Contact us if",
                     elements: [
-                        "Van egy jó ötleted, de nincs meg hozzá a megfelelő beszállító partner",
-                        "Új terméket fejlesztenél",
-                        "Nem vagy megelégedve a már meglévő beszállítókkal, vagy alternatívát keresel",
-                        "Nem mozogsz magabiztosan a külkereskedelem világában",
-                        "Saját brand-et akarsz létrehozni"
+                        "You have a good idea, but you don’t have the right supplier partner to add",
+                        "You would develope a new product",
+                        "You are not satisfied with your existing suppliers or are looking for an alternative",
+                        "You are not confidently in the world of foreign trade",
+                        "You want to create your own brand"
                     ]
                 },
                 introduction: {
-                    name: "Vér Balázs",
-                    role: "Beszerzési vezető",
+                    name: "Balázs Vér",
+                    role: "Purchasing Manager",
                     desc: [
-                        "Kínai irodánkat irányítom.",
-                        "10 éve élek Kínában, tanulmányaimat is itt végeztem nemzetközi kereskedelem és gazdaságtan szakon.",
-                        "Több mint 5 éve foglalkozom termékbeszerzéssel.",
-                        "Szerteágazó kapcsolatrendszerem és folyékony kínai nyelvtudásom révén, igyekszem a lehető legjobb árakat és feltételeket biztosítani ügyfeleink számára."
+                        "I run our Chinese office.",
+                        "I have been living in China for 10 years, I also studied international trade and economics here.",
+                        "I have been purchasing products for more than 5 years.",
+                        "Through my diversified network of contacts and fluency in Chinese, I strive to provide the best possible prices and terms for our customers."
                     ]
                 }
             },
