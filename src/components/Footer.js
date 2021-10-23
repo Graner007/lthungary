@@ -7,7 +7,7 @@ const Footer = () => {
     const language =  isHuTrue ? hu : en;
     const footer = language.footer;
     return (
-        <div className="footer container">
+        <div className="footer">
             <div className="footer-service">
                 <h3>{footer[0].title}</h3>
                 {language.dropdown.map((text, index) => (

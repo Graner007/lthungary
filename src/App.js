@@ -15,7 +15,7 @@ import Service from "./components/Service";
 function App() {
   return (
     <ColorContextProvider>
-      <div className="container">
+      <div>
           <LanguageBar />
           <Navbar logo={logo} />
           <Switch>
