@@ -3,9 +3,11 @@ import { LanguageContext } from "../contexts/LanguageContext";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+    
     const {isHuTrue, hu, en} = useContext(LanguageContext);
     const language =  isHuTrue ? hu : en;
     const footer = language.footer;
+
     return (
         <div className="footer">
             <div className="footer-service">

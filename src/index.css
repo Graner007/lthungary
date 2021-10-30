@@ -36,7 +36,7 @@ code {
 .sliderimg{
   width: 100%;
   height: 450px;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .nav-item {
@@ -53,26 +53,28 @@ code {
 }
 
 .service-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: white;
-  padding: 4%;
-  row-gap: 4%;
+  padding: 5%;
 }
 
 .language-navbar-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer {
-  display: grid;
+  display: flex;
   background-color: rgb(43, 41, 41);
   color: #fff;
-  grid-template-columns: 1fr 1fr;
-  text-align: start;
-  padding: 100px;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 50px;
   font-size: large;
 }
 
@@ -126,11 +128,6 @@ code {
 }
 
 @media only screen and (max-width: 1200px) {
-  .service-cards {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-
   .contact {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
@@ -144,25 +141,50 @@ code {
   .card {
     width: 100%;
   }
-
-  
 }
 
 @media only screen and (max-width: 950px) {
   .footer {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
+    padding: 20px;
   }
 
-  .language-navbar-list {
-    flex-direction: column;
+  .footer div {
+    margin-top: 10%;
+    text-align: center;
+  }
+
+  .service-container {
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .service-container h1 {
+    text-align: center;
+  }
+
+  .contact,
+  .supply-from-china,
+  .offer,
+  .about-us {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .contact,
+  .supply-from-china,
+  .offer,
+  .about-us h1 {
+    text-align: center;
   }
 }
 
 @media only screen and (max-width: 600px) {
   .service-cards {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact {
@@ -177,10 +199,11 @@ code {
 
   .card {
     width: 100%;
+    margin: 15px;
   }
 
   .footer {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    flex-direction: column;
+    padding: 20px;
   }
 }
