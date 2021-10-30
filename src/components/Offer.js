@@ -1,26 +1,27 @@
-import Space from "./Space";
 import { useContext, useState } from 'react';
-import { LanguageContext } from "../contexts/LanguageContext";
 import emailjs from 'emailjs-com';
-import Recaptcha from "react-recaptcha";
+import HCaptcha from '@hcaptcha/react-hcaptcha';
+
+import Space from "./Space";
+import { LanguageContext } from "../contexts/LanguageContext";
 
 const Offer = () => {
     const [success, setSuccess] = useState(false);
     const [error, setError] = useState(false);
-    const [recaptchaSuccess, setRecaptchaSuccess] = useState(false);
+    const [hCaptchaSuccess, setHCaptchaSuccess] = useState(false);
     const {isHuTrue, hu, en} = useContext(LanguageContext);
     const language =  isHuTrue ? hu : en;
 
     const sendEmail = (e) => {
         e.preventDefault();
 
-        if (recaptchaSuccess) {
-            emailjs.sendForm("service_t6rkps2", "template_3wynuti", e.target, "user_mTMpXYVWZAcHpA5E6wZbD")
+        if (hCaptchaSuccess) {
+            emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, e.target, process.env.REACT_APP_USER_ID)
             .then(res => {
                 if (res.text === "OK") {
                     setSuccess(true);
                     setError(false);
-                    //setRecaptchaSuccess(false);
+                    setHCaptchaSuccess(false);
                 } 
             })
             .catch(() => {
@@ -31,10 +32,6 @@ const Offer = () => {
         else {
             setError(true);
         } 
-    }
-
-    const verifyCallback = (response) => {
-        setRecaptchaSuccess(true);
     }
 
     return (
@@ -79,17 +76,12 @@ const Offer = () => {
                         ))}
                     </select>
                 </div>
-                {/* <Recaptcha
-                    sitekey="6LfbdV0cAAAAAPUvNldqXAIcbri-uPBmFnv8wgvP"
-                    render="explicit"
-                    verifyCallback={verifyCallback}
-                /> */}
+                <HCaptcha sitekey={process.env.REACT_APP_SITE_KEY} onVerify={() => setHCaptchaSuccess(true)}/>
                 <div className="col-12" style={{paddingTop: "2%"}}>
-                    <button disabled={recaptchaSuccess ? false : false} type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
+                    <button disabled={hCaptchaSuccess ? false : true} type="submit" className="btn btn-primary">{language.offer.text[7]}</button>
                 </div>
             </form>
         </div>
-        
     )
 }
 

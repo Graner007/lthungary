@@ -12,6 +12,8 @@ import SupplyFromChina from "./components/SupplyFromChina";
 import Footer from "./components/Footer";
 import Service from "./components/Service";
 
+require('dotenv').config();
+
 function App() {
   return (
     <ColorContextProvider>
